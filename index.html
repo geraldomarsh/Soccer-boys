@@ -849,7 +849,7 @@ const timers=new Map(),inflight=new Set(),again=new Set();
 const pending=id=>timers.has(id)||inflight.has(id)||again.has(id);
 const body=p=>({name:p.name,num:p.num,pace:p.pace,shoot:p.shoot,pass:p.pass,def:p.def,photo:p.photo,o:p.o});
 const SYNC={
-  local:'Saved on this device only. Open the shared link while signed in to Claude to share the squad.',
+  local:'Saved on this device only. Open the shared.',
   sync:'Connecting to the shared squad...',
   ok:'Shared squad. Changes show up on everyone\'s devices as you make them.',
   ro:'You can view this squad but not edit it. Ask the owner to give you Contributor access.',
