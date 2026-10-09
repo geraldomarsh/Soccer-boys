@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120f">
+  <meta name="description" content="The Diddy Party — 5-a-side football, stats, and questionable decisions.">
+  <title>The Diddy Party FC | Matchday HQ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="ticker" aria-label="Team motto"><span>⚽ SAME PITCH. DIFFERENT PROBLEMS. &nbsp; ✦ &nbsp; FIVE A SIDE, ZERO TACTICS. &nbsp; ✦ &nbsp; GOOD VIBES, QUESTIONABLE FINISHING. &nbsp; ✦ &nbsp;</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="The Diddy Party home">
+      <span class="brand-ball">⚽</span><span>THE DIDDY<br><b>PARTY</b></span><span class="brand-fc">FC</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ <span class="sr-only">Toggle navigation</span></button>
+    <nav id="mainNav" class="nav">
+      <a class="active" href="#home">HQ</a><a href="#squad">The Menaces</a><a href="#stats">Stats</a><a href="#matchday">Matchday</a><a href="admin.html">Admin ⚙</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> UNOFFICIAL. UNSTABLE. UNDEFEATED IN OUR HEADS.</p>
+        <h1>Welcome to<br><span>THE DIDDY</span><br>PARTY.</h1>
+        <p class="hero-sub">Five players. One ball. Absolutely no idea who's marking who.</p>
+        <div class="hero-actions"><a class="button button-green" href="#matchday">⚡ Matchday HQ</a><a class="button button-ghost" href="#squad">Meet the squad ↘</a></div>
+        <div class="hero-stamp">EST. WHENEVER<br><b>✦ PURE CHAOS ✦</b></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustrated football pitch with a football">
+        <div class="pitch-lines"></div><div class="sunburst"></div>
+        <div class="football">⚽</div><div class="scribble scribble-top">NO<br>GAMES.</div><div class="scribble scribble-bottom">EXCEPT<br>THE GAME.</div>
+        <div class="art-label"><span>THE CAGE</span><b>HOME OF THE HIGHLIGHTS<br>AND THE LOWLIGHTS</b></div>
+      </div>
+    </section>
+
+    <section class="wrap dashboard-grid" aria-label="Team overview">
+      <article class="panel next-match">
+        <div class="panel-head"><span class="eyebrow">NEXT SESSION</span><span class="tag tag-green">UP NEXT</span></div>
+        <h2>Operation: Touch Grass</h2>
+        <p class="muted">Your next 5-a-side session</p>
+        <div class="match-meta"><span>📅 <strong id="nextDate">Add your date</strong></span><span>📍 <strong id="venue">Your usual pitch</strong></span></div>
+        <button class="button button-green button-small" id="editSessionBtn">✎ Set session details</button>
+        <p class="tiny muted">No session details? No stress. The vibes are pencilled in.</p>
+      </article>
+
+      <article class="panel result-panel">
+        <div class="panel-head"><span class="eyebrow">LATEST RESULT</span><span class="tag">SAMPLE DATA</span></div>
+        <div class="scoreline"><div class="team-mark">DP</div><div class="score"><strong id="homeScore">6</strong><span>:</span><strong id="awayScore">4</strong></div><div class="opponent-mark">THE OPPs</div></div>
+        <p class="result-caption" id="resultCaption">A tactical masterclass. Allegedly.</p>
+        <button class="text-button" id="editResultBtn">Update result ↗</button>
+      </article>
+
+      <article class="panel top-scorer">
+        <div class="panel-head"><span class="eyebrow">GOLDEN BOOT WATCH</span><span>🏆</span></div>
+        <div class="scorer-row"><div class="avatar avatar-large">⚡</div><div><h3 id="topScorerName">Geraldo</h3><p class="muted">Current top scorer</p></div><strong class="goal-count"><span id="topScorerGoals">12</span><small>GOALS</small></strong></div>
+        <p class="tiny muted">Big boots. Bigger ego. Check the stats before talking.</p>
+      </article>
+    </section>
+
+    <section class="wrap section" id="squad">
+      <div class="section-heading"><div><p class="eyebrow">THE STARTING XI* </p><h2>Meet the <span>menaces.</span></h2><p class="muted">*It's 5-a-side. Maths isn't our strong point.</p></div><span class="tag">SQUAD ROSTER</span></div>
+      <div class="player-grid" id="playerGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="wrap section" id="stats">
+      <div class="section-heading"><div><p class="eyebrow">NUMBERS DON'T LIE</p><h2>Stats & <span>shenanigans.</span></h2></div><span class="tag tag-green">SEASON SO FAR</span></div>
+      <div class="stat-grid">
+        <article class="stat-card"><span>⚽</span><strong id="totalGoals">37</strong><p>Goals scored</p><small>Some were accidental.</small></article>
+        <article class="stat-card"><span>🪄</span><strong id="totalAssists">18</strong><p>Assists</p><small>Sharing is caring.</small></article>
+        <article class="stat-card"><span>🧤</span><strong id="cleanSheets">4</strong><p>Clean sheets</p><small>Keeper was cooking.</small></article>
+        <article class="stat-card"><span>🫠</span><strong id="ownGoals">2</strong><p>Own goals</p><small>We don't talk about it.</small></article>
+      </div>
+      <div class="panel leaderboard-panel">
+        <div class="panel-head"><div><p class="eyebrow">THE PECKING ORDER</p><h3>Top ballers (apparently)</h3></div><span class="tag">UPDATED AUTOMATICALLY</span></div>
+        <div class="table-scroll"><table><thead><tr><th>#</th><th>Player</th><th>Position</th><th>⚽ Goals</th><th>🪄 Assists</th><th>OVR</th></tr></thead><tbody id="leaderboardBody"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="matchday">
+      <div class="section-heading"><div><p class="eyebrow">YOUR CALL, COACH</p><h2>Matchday <span>mayhem.</span></h2><p class="muted">The admin (you) runs the show. Everyone else can argue in person.</p></div></div>
+      <div class="matchday-grid">
+        <article class="panel">
+          <div class="panel-head"><h3>🎲 Random banter generator</h3><span class="tag">PG-ISH</span></div>
+          <div class="roast-box"><span class="quote-mark">“</span><p id="banterText">Your first touch has a long-distance relationship with the ball.</p></div>
+          <button class="button button-green" id="banterBtn">Generate more nonsense ↻</button>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3>🗳️ Who cooked today?</h3><span class="tag">LOCAL DEMO</span></div>
+          <p class="muted">Pick a Player of the Match. Votes are saved in this browser for the demo.</p>
+          <form id="voteForm" class="stack">
+            <label for="votePlayer">Your pick</label><select id="votePlayer" required></select>
+            <button class="button button-green" type="submit">Cast my vote ⚡</button>
+          </form>
+          <div id="voteResults" class="vote-results" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap admin-note">
+      <div><span class="admin-icon">🛠️</span><div><strong>Admin-only clubhouse</strong><p>Right now, changes are demo-level and stored in this browser. You're the manager; protect the clipboard.</p></div></div>
+      <button class="button button-ghost button-small" id="resetBtn">Reset demo data</button>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="brand footer-brand" href="#home">⚽ THE DIDDY PARTY <span class="brand-fc">FC</span></a><p>Built for the beautiful game. Blamed on the pitch.</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+  <dialog id="sessionDialog" class="modal">
+    <form method="dialog" id="sessionForm" class="modal-card">
+      <button class="modal-close" aria-label="Close">×</button><p class="eyebrow">MANAGER MODE</p><h2>Set the next session</h2>
+      <label for="sessionDate">Date and time</label><input id="sessionDate" type="datetime-local">
+      <label for="sessionVenue">Pitch / venue</label><input id="sessionVenue" maxlength="70" placeholder="e.g. The Cage, Court 2">
+      <div class="modal-actions"><button class="button button-ghost" value="cancel">Cancel</button><button class="button button-green" id="saveSessionBtn" value="default">Save session</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="resultDialog" class="modal">
+    <form method="dialog" id="resultForm" class="modal-card">
+      <button class="modal-close" aria-label="Close">×</button><p class="eyebrow">MANAGER MODE</p><h2>Update the score</h2>
+      <div class="score-inputs"><div><label for="newHomeScore">The Diddy Party</label><input id="newHomeScore" type="number" min="0" max="99" value="6" required></div><span>:</span><div><label for="newAwayScore">Opponents</label><input id="newAwayScore" type="number" min="0" max="99" value="4" required></div></div>
+      <label for="resultNote">Match report</label><input id="resultNote" maxlength="100" placeholder="A tactical masterclass. Allegedly.">
+      <div class="modal-actions"><button class="button button-ghost" value="cancel">Cancel</button><button class="button button-green" id="saveResultBtn" value="default">Save result</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
