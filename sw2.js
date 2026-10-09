@@ -1,7 +1,7 @@
 const CACHE_NAME = "bday-quest-v1";
 const FILES_TO_CACHE = [
   "./index.html",
-  "./manifest.json",
+  "./manifestsoccer.json",
   "./icon-192.png",
   "./icon-512.png"
 ];
